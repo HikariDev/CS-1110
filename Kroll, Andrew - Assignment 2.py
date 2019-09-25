@@ -61,7 +61,7 @@ while True:  # Doing Stuff
                 print("Invalid base salary!")
                 continue
         if tier < 0:
-            a = str(input("Tier: ")).upper()
+            a = str(input("Tier ('L', 'M', or 'H'): ")).upper()
             if len(a) > 0 and a.startswith('L'):
                 tier = 0
             elif len(a) > 0 and a.startswith('M'):
