@@ -1,6 +1,6 @@
 # PROGRAM: Assignment 2: The Laptop Shop
 # AUTHOR: Andrew Kroll
-# DATE: 09/024/2019
+# DATE: 09/24/2019
 # DESCRIPTION: This program gives a monthly payroll report for the sales staff
 # at The Laptop Shop
 
