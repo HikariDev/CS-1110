@@ -16,24 +16,24 @@ MAX_VALID_UNITS = 40
 F_STR = "${0:>10,.2f}"
 
 
-def sales(arr):
+def calc_sales(arr):
     return arr[0]*PRICES['basic'] + arr[1]*PRICES['mid-range'] + \
            arr[2]*PRICES['high-end']
 
 
-def commission(arr):
+def calc_commission(arr):
     return arr[0]*COMMISSION['basic'] + arr[1]*COMMISSION['mid-range'] + \
            arr[2]*COMMISSION['high-end']
 
 
-def bonus(sales):
-    if sales > 2000:
-        return sales * 0.01
-    elif sales > 4000:
-        return (sales - 4000) * 0.01 + 75
-    elif sales > 7500:
-        return (sales - 7500) * 0.015 + 75
-    elif sales > 10000:
+def calc_bonus(total_sales):
+    if total_sales > 2000:
+        return total_sales * 0.01
+    elif total_sales > 4000:
+        return (total_sales - 4000) * 0.01 + 75
+    elif total_sales > 7500:
+        return (total_sales - 7500) * 0.015 + 75
+    elif total_sales > 10000:
         return 300
     return 0
 
@@ -74,7 +74,7 @@ while True:  # Doing Stuff
         if laptops_sold[0] < 0:
             try:
                 a = int(input("Basic Laptops Sold: "))
-                if 0 < a <= MAX_VALID_UNITS:
+                if 0 <= a <= MAX_VALID_UNITS:
                     laptops_sold[0] = a
                 else:
                     print("Invalid basic laptop amount!")
@@ -85,7 +85,7 @@ while True:  # Doing Stuff
         if laptops_sold[1] < 0:
             try:
                 a = int(input("Mid-Range Laptops Sold: "))
-                if 0 < a <= MAX_VALID_UNITS:
+                if 0 <= a <= MAX_VALID_UNITS:
                     laptops_sold[1] = a
                 else:
                     print("Invalid mid-range laptop amount!")
@@ -96,7 +96,7 @@ while True:  # Doing Stuff
         if laptops_sold[2] < 0:
             try:
                 a = int(input("High-End Laptops Sold: "))
-                if 0 < a <= MAX_VALID_UNITS:
+                if 0 <= a <= MAX_VALID_UNITS:
                     laptops_sold[2] = a
                 else:
                     print("Invalid high-end laptop amount!")
@@ -107,9 +107,9 @@ while True:  # Doing Stuff
         break
     print(name, base_salary, tier, laptops_sold, sep='\n')
     new_tier = tier
-    sales = sales(laptops_sold)
-    commission = commission(laptops_sold)
-    bonus = bonus(sales)
+    sales = calc_sales(laptops_sold)
+    commission = calc_commission(laptops_sold)
+    bonus = calc_bonus(sales)
     super_bonus = 0
     promoted = False
     if commission > base_salary/2:
