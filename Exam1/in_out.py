@@ -1,15 +1,14 @@
 # Input
 def get_n():
-    i = int(input("Enter a positive integer: "))
-    while i < 0:
-        i = int(input("Enter a positive integer: "))
-    return i
+    return int(input("How many pairs would you like to enter? "))
 
 
 def get_input_pair():
     pair = [-1, -1]
     for i in range(2):
-        pair[i] = get_n()
+        pair[i] = int(input("Enter a positive integer: "))
+        while pair[i] < 0:
+            i = int(input("Enter a positive integer: "))
     if pair[0] < pair[1]:
         pair[0], pair[1] = pair[1], pair[0]
     return pair

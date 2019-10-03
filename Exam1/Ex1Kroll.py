@@ -9,7 +9,7 @@ from Exam1 import in_out
 
 
 def main():
-    num_pairs = int(input("How many pairs would you like to enter? "))
+    num_pairs = in_out.get_n()
     pairs = [[]*2]*num_pairs
     for i in range(num_pairs):
         pairs[i] = in_out.get_input_pair()
