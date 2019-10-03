@@ -8,24 +8,6 @@
 from Exam1 import in_out
 
 
-def do_magic_op(num_pairs, pairs):
-    total = 0
-    even = 0
-    odd = 0
-    mixed = 0
-    for i in range(num_pairs):
-        if pairs[i][0] % 2 == 0 and pairs[i][1] % 2 == 0:
-            even += 1
-            total += pairs[i][0] * pairs[i][1]
-        elif pairs[i][0] % 2 != 0 and pairs[i][1] % 2 != 0:
-            odd += 1
-            total += pairs[i][0] + pairs[i][1]
-        else:
-            mixed += 1
-            total += pairs[i][0] - pairs[i][1]
-    return total, even, odd, mixed
-
-
 def main():
     num_pairs = int(input("How many pairs would you like to enter? "))
     pairs = [[]*2]*num_pairs
@@ -61,6 +43,24 @@ def main():
     magic = do_magic_op(num_pairs, pairs)
     in_out.print_magic_part(num_pairs, magic[0], magic[1], magic[2], magic[3])
     in_out.print_footer()
+
+
+def do_magic_op(num_pairs, pairs):
+    total = 0
+    even = 0
+    odd = 0
+    mixed = 0
+    for i in range(num_pairs):
+        if pairs[i][0] % 2 == 0 and pairs[i][1] % 2 == 0:
+            even += 1
+            total += pairs[i][0] * pairs[i][1]
+        elif pairs[i][0] % 2 != 0 and pairs[i][1] % 2 != 0:
+            odd += 1
+            total += pairs[i][0] + pairs[i][1]
+        else:
+            mixed += 1
+            total += pairs[i][0] - pairs[i][1]
+    return total, even, odd, mixed
 
 
 main()
