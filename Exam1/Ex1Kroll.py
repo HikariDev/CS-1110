@@ -14,24 +14,24 @@ def main():
     for i in range(num_pairs):
         pairs[i] = in_out.get_input_pair()
     all_total = 0
-    all_minimum = 2**32-1
-    all_maximum = 0
+    all_minimum = -1
+    all_maximum = -1
     larger_total = 0
-    larger_minimum = 2**32-1
-    larger_maximum = 0
+    larger_minimum = -1
+    larger_maximum = -1
     for i in range(num_pairs):
         for sub_i in range(2):
             all_total += pairs[i][sub_i]
-            if pairs[i][sub_i] < all_minimum:
+            if pairs[i][sub_i] < all_minimum or all_minimum == -1:
                 all_minimum = pairs[i][sub_i]
-            if pairs[i][sub_i] > all_maximum:
+            if pairs[i][sub_i] > all_maximum or all_maximum == -1:
                 all_maximum = pairs[i][sub_i]
 
             if sub_i == 0:
                 larger_total += pairs[i][sub_i]
-                if pairs[i][sub_i] < larger_minimum:
+                if pairs[i][sub_i] < larger_minimum or larger_minimum == -1:
                     larger_minimum = pairs[i][sub_i]
-                if pairs[i][sub_i] > larger_maximum:
+                if pairs[i][sub_i] > larger_maximum or larger_maximum == -1:
                     larger_maximum = pairs[i][sub_i]
     all_average = all_total / (num_pairs * 2)
     larger_average = larger_total / num_pairs
