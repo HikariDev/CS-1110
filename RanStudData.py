@@ -16,5 +16,5 @@ with open("RanStudData.csv", 'w') as file:
         elif 320000000 >= ssn >= 300000000:
             city = "Plainwell"
         gpa = random.uniform(0, 4)
-        file.write("{0:n},{1:n},{2:n},{3:n},{4},{5:.2f}\n".format(ssn, win,
+        file.write("{0},{1},{2},{3},{4},{5:.2f}\n".format(ssn, win,
                                                 age, zip_code, city, gpa))
