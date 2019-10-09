@@ -6,7 +6,7 @@ with open("RanStudData.csv", 'w') as file:
         win = random.randint(100000000, 999999999)
         age = random.randint(17, 35)
         zip_code = random.randint(49000, 49999)
-        city = None
+        city = ""
         if zip_code % 2 == 0:
             city = "Kalamazoo"
         elif ssn % 10 == 5 or ssn % 10000000 == 7:
