@@ -3,15 +3,16 @@ import line_drawer
 
 
 def main():
-    return
+    message = get_message()
+    dimensions = get_char_dimen()
 
 
 def get_message():
-    return
+    return str(input("Sign Text: "))
 
 
 def get_char_dimen():
-    return
+    return int(input("Character Width: ")), int(input("Character Height: "))
 
 
 def decide_which_char():
