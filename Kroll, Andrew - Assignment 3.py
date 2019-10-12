@@ -1,3 +1,9 @@
+# PROGRAM: Assignment 3: Chunky Sign
+# AUTHOR: Andrew Kroll
+# DATE: 10/12/2019
+# DESCRIPTION: This app produces a vertical sign of chunky characters
+# (using EXACT font shown below) based on a message supplied by the user.
+
 import char_des
 
 
@@ -14,7 +20,8 @@ def get_message():
 
 
 def get_char_dimen():
-    width, height = int(input("Character Width (8-18, EVEN): ")), int(input("Character Height (10-20, EVEN): "))
+    width = int(input("Character Width (8-18, EVEN): "))
+    height = int(input("Character Height (10-20, EVEN): "))
     if width % 2 == 1:
         width += 1
     if height % 2 == 1:
