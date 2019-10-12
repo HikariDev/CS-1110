@@ -1,118 +1,146 @@
-def des0():
-    return
+import line_drawer
 
 
-def des1():
-    return
+def des0(width, height):
+    line_drawer.draw_mix_hor(2, width-4)
+    line_drawer.draw_LR_ver(width, height-4)
+    line_drawer.draw_mix_hor(2, width-4)
 
 
-def des2():
-    return
+def des1(width, height):
+    line_drawer.draw_M_ver(width, height)
 
 
-def des3():
-    return
+def des2(width, height):
+    line_drawer.draw_hor(width-2)
+    line_drawer.draw_R_ver(width, (height-6)//2)
+    line_drawer.draw_mix_hor(2, width-4)
+    line_drawer.draw_L_ver((height-6)//2)
+    line_drawer.draw_hor(width)
 
 
-def des4():
-    return
+def des3(width, height):
+    line_drawer.draw_hor(width-2)
+    line_drawer.draw_R_ver(width, (height-6)//2)
+    line_drawer.draw_mix_hor((width-2)//2, (width-2)//2)
+    line_drawer.draw_R_ver(width, (height-6)//2)
+    line_drawer.draw_hor(width-2)
 
 
-def des5():
-    return
+def des4(width, height):
+    line_drawer.draw_LR_ver(width, (height-2)//2)
+    line_drawer.draw_hor(width)
+    line_drawer.draw_R_ver(width, (height-2)//2)
 
 
-def des6():
-    return
+def des5(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_L_ver((height-6)//2)
+    line_drawer.draw_hor(width-2)
+    line_drawer.draw_R_ver(width, (height-6)//2)
+    line_drawer.draw_hor(width-2)
 
 
-def des7():
-    return
+def des6(width, height):
+    line_drawer.draw_L_ver((height-4)//2)
+    line_drawer.draw_hor(width-2)
+    line_drawer.draw_LR_ver(width, (height-4)//2)
+    line_drawer.draw_mix_hor(2, width-4)
 
 
-def des8():
-    return
+def des7(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_R_ver(width, height-2)
 
 
-def des9():
-    return
+def des8(width, height):
+    line_drawer.draw_mix_hor(2, width-4)
+    line_drawer.draw_LR_ver(width, (height-6)//2)
+    line_drawer.draw_mix_hor(2, width-4)
+    line_drawer.draw_LR_ver(width, (height-6)//2)
+    line_drawer.draw_mix_hor(2, width-4)
 
 
-def desC():
-    return
+def des9(width, height):
+    line_drawer.draw_mix_hor(2, width-4)
+    line_drawer.draw_LR_ver(width, (height-4)//2)
+    line_drawer.draw_mix_hor(2, width-2)
+    line_drawer.draw_R_ver(width, (height-4)//2)
 
 
-def desE():
-    return
+def desC(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_L_ver(height-4)
+    line_drawer.draw_hor(width)
 
 
-def desF():
-    return
+def desE(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_L_ver((height-6)//2)
+    line_drawer.draw_hor(width//2)
+    line_drawer.draw_L_ver((height-6)//2)
+    line_drawer.draw_hor(width)
 
 
-def desG():
-    return
+def desF(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_L_ver((height-4)//2)
+    line_drawer.draw_hor(width//2)
+    line_drawer.draw_L_ver((height-4)//2)
 
 
-def desH():
-    return
+def desH(width, height):
+    line_drawer.draw_LR_ver(width, (height-2)//2)
+    line_drawer.draw_hor(width)
+    line_drawer.draw_LR_ver(width, (height-2)//2)
 
 
-def desI():
-    return
+def desI(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_M_ver(width, height-4)
+    line_drawer.draw_hor(width)
 
 
-def desJ():
-    return
+def desL(width, height):
+    line_drawer.draw_L_ver(height-2)
+    line_drawer.draw_hor(width)
 
 
-def desK():
-    return
+def desO(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_LR_ver(width, height-4)
+    line_drawer.draw_hor(width)
 
 
-def desL():
-    return
+def desP(width, height):
+    line_drawer.draw_hor(width-2)
+    line_drawer.draw_LR_ver(width, (height-4)//2)
+    line_drawer.draw_hor(width-2)
+    line_drawer.draw_L_ver((height-4)//2)
 
 
-def desM():
-    return
+def desS(width, height):
+    line_drawer.draw_mix_hor(2, width-2)
+    line_drawer.draw_L_ver((height-6)//2)
+    line_drawer.draw_mix_hor(2, width-4)
+    line_drawer.draw_R_ver(width, (height-6)//2)
+    line_drawer.draw_hor(width-2)
 
 
-def desN():
-    return
+def desT(width, height):
+    line_drawer.draw_hor(width)
+    line_drawer.draw_M_ver(width, height-2)
 
 
-def desO():
-    return
+def desU(width, height):
+    line_drawer.draw_LR_ver(width, height-2)
+    line_drawer.draw_mix_hor(2, width-4)
 
 
-def desP():
-    return
+def desSPACE(height):
+    line_drawer.draw_space(height)
 
 
-def desQ():
-    return
-
-
-def desR():
-    return
-
-
-def desS():
-    return
-
-
-def desT():
-    return
-
-
-def desU():
-    return
-
-
-def desSPACE():
-    return
-
-
-def desODD():
-    return
+def desODD(width, height):
+    for row in range(height//2):
+        line_drawer.draw_hor(width)
