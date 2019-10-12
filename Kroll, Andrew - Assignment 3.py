@@ -85,4 +85,5 @@ def decide_which_char(char, width, height):
     else:
         char_des.desODD(width, height)
 
+
 main()
