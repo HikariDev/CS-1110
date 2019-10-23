@@ -5,40 +5,39 @@ def main():
 
     with open("LilPeople4Lines.txt") as file:
         data = list(file)
-        i = 0
-        for line in data:
+        for i in range(len(data)):
             if i % 4 == 0:
-                names += [line.replace("\n", "")]
+                names += [data[i].replace("\n", "")]
             elif i % 4 == 2:
-                ages += [line.replace("\n", "")]
+                ages += [data[i].replace("\n", "")]
             elif i % 4 == 3:
-                salaries += [line.replace("\n", "")]
-            i += 1
-        for i in range(len(ages)):
-            ages[i] = int(ages[i])
-        for i in range(len(salaries)):
-            salaries[i] = float(salaries[i])
+                salaries += [data[i].replace("\n", "")]
 
-        total_salary = 0
-        average_salary = 0
-        average_age = 0
-        temp_min = -1
-        temp_mins_name = ""
-        temp_max = -1
-        temp_maxs_name = ""
+    for i in range(len(ages)):
+        ages[i] = int(ages[i])
+    for i in range(len(salaries)):
+        salaries[i] = float(salaries[i])
 
-        for i in range(len(ages)):
-            if temp_min == -1 or ages[i] < temp_min:
-                temp_min = ages[i]
-                temp_mins_name = names[i]
-            if temp_max == -1 or ages[i] > temp_max:
-                temp_max = ages[i]
-                temp_maxs_name = names[i]
-            average_age += ages[i]
-        average_age = average_age // len(ages)
-        for salary in salaries:
-            total_salary += salary
-        average_salary = total_salary / len(salaries)
+    total_salary = 0
+    average_salary = 0
+    average_age = 0
+    temp_min = -1
+    temp_mins_name = ""
+    temp_max = -1
+    temp_maxs_name = ""
+
+    for i in range(len(ages)):
+        if temp_min == -1 or ages[i] < temp_min:
+            temp_min = ages[i]
+            temp_mins_name = names[i]
+        if temp_max == -1 or ages[i] > temp_max:
+            temp_max = ages[i]
+            temp_maxs_name = names[i]
+        average_age += ages[i]
+    average_age = average_age // len(ages)
+    for salary in salaries:
+        total_salary += salary
+    average_salary = total_salary / len(salaries)
 
     print("Lil Person List Task\n")
     print("{0:<8}\t{1:>4}\t{2:>10}".format("NAME", "AGE", "SALARY"), "\n")
