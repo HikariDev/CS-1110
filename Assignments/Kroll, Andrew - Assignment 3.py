@@ -7,7 +7,7 @@
 # characters (all are the same size).
 
 
-import char_des
+from Assignments import char_des
 
 
 def main():
