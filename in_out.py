@@ -10,33 +10,45 @@ def get_mode():
     return mode
 
 
-def get_match_game_count(mode, file):
+def get_game_match_count(mode, file):
     if mode == "game":
-        games = int(input("How many games would you like to play (4+)?"))
+        games = int(input("How many games would you like to play (4+)? "))
         while games < 4:
             print("Invalid number of games!")
-            games = int(input("How many games would you like to play (4+)?"))
-        matches = int(input("How many matches would you like to play (2+)?"))
+            games = int(input("How many games would you like to play (4+)? "))
+        matches = int(input("How many matches would you like to play (2+)? "))
         while matches < 2:
             print("Invalid number of matches!")
             matches = int(input("How many matches would you \
-            like to play (2+)?"))
+            like to play (2+)? "))
         return games, matches
     else:
-        return list(file)[0].replace('\n', '').split(',')
+        games, matches = list(file)[0].replace('\n', '').split(',')
+        return int(games), int(matches)
 
 
-def get_move(mode, file, round):
+def get_human_move(mode, game_num, human_moves):
     if mode == "game":
         move = input("(R)ock, (P)aper, or (S)cissors? ").lower()
         while not (move == "r" or move == "p" or move == "s"):
-            print("Invalid move!")
+            print("Invalid move! Please only enter one letter")
             move = input("(R)ock, (P)aper, or (S)cissors? ")
-        return move
+        if move == "r":
+            return "Rock"
+        elif move == "p":
+            return "Paper"
+        else:
+            return "Scissors"
     else:
-        print(round)
-        print(list(file))
-        return list(file)[round].replace('\n', '')
+        return human_moves[game_num]
+
+
+def get_human_moves(file):
+    moves = list(file)
+    moves.remove(moves[0])
+    for i in range(len(moves)):
+        moves[i] = moves[i].replace("\n", "")
+    return moves
 
 
 # ---- Output Section ----
@@ -51,7 +63,11 @@ def make_test_file():
         random.seed(456)
         for i in range(N_GAMES*N_MATCHES):
             file.write("\n" + MOVES[random.randint(0, 2)])
+    return
 
 
-def output_turn(mode, file, move):
-    print(mode, move)
+def output_line(file, mode, line):
+    if mode == "test":
+        file.write(line + "\n")
+    else:
+        print(line)
