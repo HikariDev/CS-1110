@@ -1,5 +1,5 @@
 # MODULE:  dump_load_db.py                  used by PROJECT:  StateDB.py
-# AUTHOR:                                           DESIGNER: Dr. Kaminski
+# AUTHOR: Andrew Kroll                               DESIGNER: Dr. Kaminski
 # DESCRIPTION:  Does pickling/unpickling of DB (dictionary) to/from
 #       StateDB.bin.  Needs load and dump functions.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -1,5 +1,5 @@
 # PROJECT:  StateDB.py                     uses MODULES:  see imports below
-# AUTHOR:                                           DESIGNER: Dr. Kaminski
+# AUTHOR: Andrew Kroll                               DESIGNER: Dr. Kaminski
 # DESCRIPTION:  Creates a "database" (DB) of state information so it can
 #       be queried by the user.  The DB is stored in a dictionary.
 #       2 modes - ask user for S or N (capitalize their response for safety):
@@ -14,6 +14,7 @@
 from Lab10 import create_db as create
 from Lab10 import dump_load_db as backup
 from time import sleep
+
 
 def main():
     temp = input("(S)tartup or (N)ormal? ").upper()

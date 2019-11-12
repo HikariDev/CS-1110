@@ -1,5 +1,5 @@
 # MODULE:  create_db.py                       used by PROJECT:  StateDB.py
-# AUTHOR:                                           DESIGNER: Dr. Kaminski
+# AUTHOR: Andrew Kroll                               DESIGNER: Dr. Kaminski
 # DESCRIPTION:  Creates DB (dictionary) using data from StateData.csv file.
 #       (NOTE:  There are 2 header records to skip).  The DB contains:
 #               KEY:  state name (convert to all caps)
