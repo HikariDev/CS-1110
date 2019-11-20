@@ -1,0 +1,25 @@
+ACCESS PATH to get the ACTUAL DATA from the DB,
+    depending on what type of KEY is used . . .
+
+
+To access by PK (country name)
+- use name as key to access db
+        >>> gets value: tuple of fields to write (plus name)
+
+To access by a CK (country id or country code)
+- for id:
+    - use id as key to access id_index >>> gets value:  name
+    - use name as key to access db
+        >>> gets value:  tuple of fields to write (plus name)
+- for code:
+    - same as above, but use code_index
+
+To access by an SK (cont)
+- use cont as key to access cont_index >>> gets value:  LIST OF names
+- loop through that list - use each name as key to access db
+        >>> gets value: tuple of fields to write (plus name)
+
+To access by a NON-key (pop) (with a > or < condition)
+- go through entire db dictionary, getting the value part
+    (tuple which includes pop)
+    - check if condition True or False & either write the data or don't

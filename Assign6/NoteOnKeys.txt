@@ -1,0 +1,117 @@
+Different types of KEYS for a "database" (DB)
+    (I am not talking about an actual database, per se, here, with it's
+        DBMS (Data Base Managment System) which uses SQL to query the DB.
+        I'm using database in a generic sense for this project).
+
+
+KEY fields for a DB are how one typically accesses specific records in the
+DB when the purpose is to handle EQUALITY QUERIES, e.g.,
+            - name == Germany
+            - id == 125
+            - code == MEX
+            - continent == Europe
+This is a much more efficient access method than doing a search of the
+entire DB, as we did for an earlier assignment.  Generally, the DB is
+organized around a KEY field as the core for structuring the records'
+locations in the data (or file) structure.  That key field is how most
+queries "search" for data.  Other key fields result in additional indexes
+for the DB.
+
+For RANGE or CONDITION-BASED QUERIES, data access is more like what we've
+used for an earlier assignment - see more in the section at the bottom.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Python DICTIONARIES
+
+Python dictionaries provide "random access" (more specifically, "direct
+access") to a particular record in the DB.
+>>> So the DB in this project is implemented as a dictionary:  db.
+
+Indexes also provide "random access" (. . .) to a particular record(s),
+with a slight extra expense to first access the index - and then the
+index leads to finding the actual record in the DB itself.
+>>> The indexes in this project are implemented as dictionaries as well
+    id_index, code_index, cont_index.
+
+Searching a python dictionary is Order of Complexity O(1), even if
+there's an "index search" followed by a "DB search" because of how python
+implements dictionaries (as hash tables).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+PRIMARY KEYS AND CANDIDATE KEYS
+
+There are 3 fields (in a record) which uniquely identify a particular
+record in this project:
+        country id, country code, country name.
+These 3 are candidate keys (CKs) for the DB.
+One of the CK's is chosen to be the DB's primary key (PK), leaving the
+remaining 2 fields as CKs.  The designer chooses the PK to be the CK
+which will most often be used to access the DB - in this case, name.
+
+THE DB:  The PK is the key for the DB itself (so it's the KEY for the
+DB dictionary).  The remaining fields in the record (including the CKs)
+are the DB dictionary's VALUE (a tuple).
+
+THE INDEXES:  The remaining CKs will each need there to be an index
+for that CK:
+    - an id_index - with id as its dictionary key
+    - a code_index - with code as its dictionary key.
+As indexes, the only VALUE needed in their dictionary is the PK, name.
+
+TO QUERY: see NoteOnAccessPathForDiffKeys
+
+THE RESULTS:  Since PKs and CKs are unique, any query by a PK or a
+CK will result in locating:
+    - a SINGLE country (for successful queries)
+    - or 0 countries (for unsuccessful queries).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+SECONDARY KEYS
+
+Secondary keys (SKs) are fields which:
+    - users (or transactions) want to use regularly as a target field for
+        accessing the DB
+    - but which do NOT uniquely identify a particular record in the DB
+        (they typically result in MULTIPLE matches in the DB).
+But because they are often used as a query key, it speeds up access if
+there is an SK index for that SK (rather than searching the entire DB
+watching for a match)
+    - i.e., continent_index (called cont_index in this project).
+
+OTHER SKs BESIDES continent?
+One might also have a region_index, but the client decided that region is
+not a search key needed for their project.
+    Population, area, etc. would typically NOT be good SK's
+    (and thus no need for a pop_index, area_index, etc.) because:
+    - there typically wouldn't be an EXACT MATCH search needed for
+        querying on pop, area, etc.  These would typically be range-
+        queries or condition-based queries.
+
+THE INDEX:  The SK index would have the SK field as its dictionary KEY.
+The dictionary VALUE would be a LIST of the countries which satisfy the
+SK value, storing the db's PK field as the list's elements.  So for
+cont_index, the LIST would contain all the country names which are in
+a particular continent.
+
+TO QUERY: see NoteOnAccessPathForDiffKeys
+
+THE RESULTS:  An SK query would result in:
+    - MANY countries (for successful queries) - most typical
+    - a SINGLE country (for successful queries) - possibly
+    - or 0 countries (for unsuccessful queries).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+RANGE QUERIES and CONDITION-BASED QUERIES are generally best handled by
+searching the entire DB, using the range or condition to check each record
+- e.g.,     - population < 1000000
+            - life expectancies between 60 and 70.
+            - pop > 1000000 and median_age < 20
+Because these types of queries often result in MANY DB records satisfying
+the condition, it's usually more practical and efficient to go through
+the entire db dictionary (as one would search a list or a file), using
+"sequential access", and checking if that record does/doesn't satisfy
+the condition.
