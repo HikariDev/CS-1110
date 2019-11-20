@@ -1,0 +1,40 @@
+Contact class
+
+------------------------------------------------- INSTANCE VARIABLES
+-    __name   :  str
+-    __phone  :  str
+	
+---------------------------------------------------- REGULAR METHODS
+
+-    __init__ (name = '', phone = '') : void
+					# default values are ''
+					# if "caller" not specify
+
+-    __str__ ( )	     : str
+
++    set_name (name : str)   : void
++    set_phone(phone : str)  : void
+
++    get_name  ( )           : str
++    get_phone ( )           : str
+
+------------------------------------------------------ OTHER METHODS
+# SPECIAL GETTERS
+
++    get_initial  ( )   : str	     # J for James Smith
++    get_area_code( )	: str	     # 269 for 2691234567
++    get_local_num( )	: str	     # 1234567 for 2691234567
++    get_local_prefix( ): str	     # 123 for 2691234567
+
+
+# OTHER METHODS   
+
++    is_sw_michigan( )  : boolean    # True for 269 area code
++    is_wmu( )          : boolean    # True for 269 area code AND
+                                     # it's 387 or 276 local prefix
++    make_nice_phone( ) : str	     # (269) 123-4567
+
+--------------------------------------------------------------- NOTE
+Since we're using Python, all methods have self as the 1st parameter.
+
+
