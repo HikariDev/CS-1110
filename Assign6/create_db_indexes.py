@@ -1,5 +1,5 @@
 # MODULE:  create_db_indexes.py            used by PROJECT: A6WorldDataQueries
-# AUTHOR:                                  DESIGNER:  Dr. Kaminski
+# AUTHOR: Andrew Kroll                     DESIGNER:  Dr. Kaminski
 # DESCRIPTION:  Builds the db and 3 indexes using data from the file.
 # INPUT FILE:  A6WorldData.csv
 #       - (no validity-checking - assume all data in file is valid)
@@ -34,7 +34,7 @@ def build_4_dictionaries():
     cont_list_of_names = [[] for i in range(0, 6)]  # used to build LOLs
     # which is later used to build cont_index
     for line in infile:
-        record = line.split(",")
+        record = line.replace("\n", "").split(",")
         if use_record(record):            # add parameter(s)
             rec_code = record[0]
             rec_id = int(record[1])
@@ -43,15 +43,13 @@ def build_4_dictionaries():
             rec_size = int(record[5])*0.3861
             rec_pop = int(record[6])
             db.update({rec_name: [rec_code, rec_id, rec_cont, rec_size,
-                                 rec_pop]})
+                                  rec_pop]})
             id_index.update({rec_id: rec_name})
             code_index.update({rec_code: rec_name})
             cont_list_of_names[which_list(rec_cont)].append(rec_name)
     cont_index = build_cont_index(cont_list_of_names)  # add parameter(s)
-
     infile.close()
     return db, id_index, code_index, cont_index
-# CODE,ID,NAME,CONTINENT,REGION,LAND_SIZE,POPULATION,LIFE_EXPECTANCY
 
 
 # decides whether to INCLUDE record in the db/indexes OR NOT

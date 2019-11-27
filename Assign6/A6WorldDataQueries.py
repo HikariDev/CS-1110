@@ -1,5 +1,5 @@
 # PROJECT: A6WorldDataQueries               uses MODULES:  see imports
-# AUTHOR:                                   DESIGNER:  Dr. Kaminski
+# AUTHOR: Andrew Kroll                      DESIGNER:  Dr. Kaminski
 # DESCRIPTION:  (see main for the big picture of what the project does).
 #           Project creates a "database" (DB) containing data for the countries
 #       of the world, using country name as the access key. It also creates
@@ -26,23 +26,20 @@ from Assign6 import query_handler as querying
 
 
 def main():
-    db, id_index, code_index, cont_index = create.build_4_dictionaries()
-    querying.do_pop_query(db, ">", 500)
-
     mode = input('Enter run mode:  N for Normal, S for Startup:  ')
     if mode.upper() == 'S':
         db, id_index, code_index, cont_index = create.build_4_dictionaries()
         print('\nOK, initial db & indexes CREATED')
-    # else:
-    #     db, id_index, code_index, cont_index = backup.load_4_dictionaries()
-    #     print('\nOK, db & indexes LOADED from backup')
+    else:
+        db, id_index, code_index, cont_index = backup.load_4_dictionaries()
+        print('\nOK, db & indexes LOADED from backup')
 
-    # querying.process_queries(db, id_index, code_index, cont_index)
-    # print('\nOK, all queries in transaction file processed')
-    # print('\tsee A6Log.txt for results')
+    querying.do_query_processing(db, id_index, code_index, cont_index)
+    print('\nOK, all queries in transaction file processed')
+    print('\tsee A6Log.txt for results')
 
-    # backup.dump_inventory(db, id_index, code_index, cont_index)
-    # print('\nOK, db & indexes SAVED to backup')
+    backup.dump_4_dictionaries(db, id_index, code_index, cont_index)
+    print('\nOK, db & indexes SAVED to backup')
 
     print('\nTHE END')
 
