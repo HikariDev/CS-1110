@@ -6,6 +6,7 @@
 # ----------------------------------------------------------------------------
 import pickle
 
+
 def dump_4_dictionaries(db, id_index, code_index, cont_index):
     dump_db(db)
     dump_id_index(id_index)
@@ -15,25 +16,25 @@ def dump_4_dictionaries(db, id_index, code_index, cont_index):
 
 def dump_db(db):
     file_name = 'WorldDB.bin'
-    with open(file_name, 'w') as file:
+    with open(file_name, 'wb') as file:
         pickle.dump(db, file)
 
 
 def dump_id_index(id_index):
     file_name = 'IdIndex.bin'
-    with open(file_name, 'w') as file:
+    with open(file_name, 'wb') as file:
         pickle.dump(id_index, file)
 
 
 def dump_code_index(code_index):
     file_name = 'CodeIndex.bin'
-    with open(file_name, 'w') as file:
+    with open(file_name, 'wb') as file:
         pickle.dump(code_index, file)
 
 
 def dump_cont_index(cont_index):
     file_name = 'ContIndex.bin'
-    with open(file_name, 'w') as file:
+    with open(file_name, 'wb') as file:
         pickle.dump(cont_index, file)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -48,23 +49,23 @@ def load_4_dictionaries():
 
 def load_db():
     file_name = 'WorldDB.bin'
-    with open(file_name, 'r') as file:
+    with open(file_name, 'rb') as file:
         return pickle.load(file)
 
 
 def load_id_index():
     file_name = 'IdIndex.bin'
-    with open(file_name, 'r') as file:
+    with open(file_name, 'rb') as file:
         return pickle.load(file)
 
 
 def load_code_index():
     file_name = 'CodeIndex.bin'
-    with open(file_name, 'r') as file:
+    with open(file_name, 'rb') as file:
         return pickle.load(file)
 
 
 def load_cont_index():
     file_name = 'ContIndex.bin'
-    with open(file_name, 'r') as file:
+    with open(file_name, 'rb') as file:
         return pickle.load(file)

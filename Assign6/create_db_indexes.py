@@ -40,7 +40,7 @@ def build_4_dictionaries():
             rec_id = int(record[1])
             rec_name = record[2].upper()
             rec_cont = record[3]
-            rec_size = int(record[5])*0.3861
+            rec_size = int(int(record[5])*0.3861)
             rec_pop = int(record[6])
             db.update({rec_name: [rec_code, rec_id, rec_cont, rec_size,
                                   rec_pop]})
