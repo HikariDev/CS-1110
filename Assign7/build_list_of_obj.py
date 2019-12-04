@@ -4,14 +4,13 @@
 #       removing before splitting the line into fields.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-from Assign7 import Destination             # MODULE which contains Destination CLASS
+from Assign7 import Destination
 
 
 def load_file_data():
     infile = open('PureMichiganData.csv', 'r')
-    infile.readline()               # skip 2 header records
+    infile.readline()  # skip 2 header records
     infile.readline()
-
     destinations = []
     line = infile.readline()
     while line != '':
@@ -19,4 +18,4 @@ def load_file_data():
         line = infile.readline()
 
     infile.close()
-    return destinations                     # the LIST of OBJECTS
+    return destinations
