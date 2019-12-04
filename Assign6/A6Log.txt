@@ -1,0 +1,88 @@
+name,United States: 229 USA United states   (North America)  3,615,255 sq.miles, pop    278,357,000
+
+name,France: 165 FRA France          (Europe       )    212,934 sq.miles, pop     59,225,700
+
+name,India:  72 IND India           (Asia         )  1,269,212 sq.miles, pop  1,013,662,000
+
+id,72: Sorry, target is not valid
+
+name,Python: Sorry, target is not valid
+
+id,001: Sorry, target is not valid
+
+id,1: Sorry, target is not valid
+
+code,USA: 229 USA United states   (North America)  3,615,255 sq.miles, pop    278,357,000
+
+code,IND:  72 IND India           (Asia         )  1,269,212 sq.miles, pop  1,013,662,000
+
+name,Bangladesh:  19 BGD Bangladesh      (Asia         )     55,597 sq.miles, pop    129,155,000
+
+code,KOR: 103 KOR South korea     (Asia         )     38,391 sq.miles, pop     46,844,000
+
+code,IRL:  75 IRL Ireland         (Europe       )     27,132 sq.miles, pop      3,775,100
+
+name,Ireland:  75 IRL Ireland         (Europe       )     27,132 sq.miles, pop      3,775,100
+
+id,75: Sorry, target is not valid
+
+id,133: Sorry, target is not valid
+
+id,94: Sorry, target is not valid
+
+id,233: Sorry, target is not valid
+
+id,999: Sorry, target is not valid
+
+code,CHN:  94 CHN China           (Asia         )  3,696,096 sq.miles, pop  1,277,558,000
+
+cont,South America: 166 GUF French guiana   (South America)     34,749 sq.miles, pop        181,000
+ 37 CHL Chile           (South America)    292,133 sq.miles, pop     15,211,000
+217 URY Uruguay         (South America)     67,573 sq.miles, pop      3,337,000
+ 12 ARG Argentina       (South America)  1,073,512 sq.miles, pop     37,032,000
+156 PRY Paraguay        (South America)    157,046 sq.miles, pop      5,496,000
+225 VEN Venezuela       (South America)    352,142 sq.miles, pop     24,170,000
+194 SUR Suriname        (South America)     63,036 sq.miles, pop        417,000
+ 43 ECU Ecuador         (South America)    109,482 sq.miles, pop     12,646,000
+ 97 COL Colombia        (South America)    439,734 sq.miles, pop     42,321,000
+157 PER Peru            (South America)    496,221 sq.miles, pop     25,662,000
+ 66 GUY Guyana          (South America)     82,999 sq.miles, pop        861,000
+ 26 BOL Bolivia         (South America)    424,162 sq.miles, pop      8,329,000
+ 29 BRA Brazil          (South America)  3,300,152 sq.miles, pop    170,115,000
+ 50 FLK Falkland island (South America)      4,699 sq.miles, pop          2,000
+
+cont,Michigan: Sorry, target is not valid
+
+pop,<: 224 VAT Holy see (vatic (Europe       )          0 sq.miles, pop          1,000
+204 TKL Tokelau         (Oceania      )          4 sq.miles, pop          2,000
+148 NFK Norfolk island  (Oceania      )         13 sq.miles, pop          2,000
+ 85 CXR Christmas islan (Oceania      )         52 sq.miles, pop          2,500
+147 NIU Niue            (Oceania      )        100 sq.miles, pop          2,000
+ 50 FLK Falkland island (South America)      4,699 sq.miles, pop          2,000
+ 70 SJM Svalbard and ja (Europe       )     24,101 sq.miles, pop          3,200
+
+pop,>:  82 JPN Japan           (Asia         )    145,879 sq.miles, pop    126,714,000
+ 78 ITA Italy           (Europe       )    116,338 sq.miles, pop     57,680,000
+165 FRA France          (Europe       )    212,934 sq.miles, pop     59,225,700
+ 30 GBR United kingdom  (Europe       )     93,783 sq.miles, pop     59,623,400
+177 DEU Germany         (Europe       )    137,846 sq.miles, pop     82,164,700
+229 USA United states   (North America)  3,615,255 sq.miles, pop    278,357,000
+133 MEX Mexico          (North America)    756,061 sq.miles, pop     98,881,000
+ 94 CHN China           (Asia         )  3,696,096 sq.miles, pop  1,277,558,000
+210 TUR Turkey          (Asia         )    299,156 sq.miles, pop     66,591,000
+ 74 IRN Iran            (Asia         )    636,368 sq.miles, pop     67,702,000
+227 VNM Vietnam         (Asia         )    128,065 sq.miles, pop     79,832,000
+202 THA Thailand        (Asia         )    198,113 sq.miles, pop     61,399,000
+ 71 IDN Indonesia       (Asia         )    735,354 sq.miles, pop    212,107,000
+ 52 PHL Philippines     (Asia         )    115,830 sq.miles, pop     75,967,000
+226 RUS Russian federat (Europe       )  6,592,811 sq.miles, pop    146,934,000
+215 UKR Ukraine         (Europe       )    233,088 sq.miles, pop     50,456,000
+ 44 EGY Egypt           (Africa       )    386,659 sq.miles, pop     68,470,000
+ 29 BRA Brazil          (South America)  3,300,152 sq.miles, pop    170,115,000
+ 72 IND India           (Asia         )  1,269,212 sq.miles, pop  1,013,662,000
+152 PAK Pakistan        (Asia         )    307,372 sq.miles, pop    156,483,000
+ 19 BGD Bangladesh      (Asia         )     55,597 sq.miles, pop    129,155,000
+146 NGA Nigeria         (Africa       )    356,666 sq.miles, pop    111,506,000
+100 COD Congo; the demo (Africa       )    905,349 sq.miles, pop     51,654,000
+ 49 ETH Ethiopia        (Africa       )    426,370 sq.miles, pop     62,565,000
+
