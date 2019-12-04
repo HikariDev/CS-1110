@@ -3,13 +3,13 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 from Assign7 import Destination
-# module to have access to the Destination CLASS
+
 
 def do_transactions(destinations):
-    infile = open('DestinationsTrans.csv', 'r')
+    infile = open('MichTrans.csv', 'r')
     print('\nDoing Transactions . . ')
     for line in infile:
-        fields = line.split(',')
+        fields = line.replace('\n', '').split(',')
         trans_type = fields[0]
         if trans_type == 'showPlace':
             show_place(fields[1], destinations)
@@ -23,22 +23,37 @@ def do_transactions(destinations):
             show_all(destinations)
     infile.close()
 
+import difflib
 
 def show_place(target, destinations):             # show data for target place
     print('\nDESTINATION:', target)
+    for destination in destinations:
+        if destination.get_place() == target:
+            print(destination)
 
 
 def show_penninsula(target, destinations):   # show data for target:  LP or UP
     print('\nDESTINATIONS IN THE', target, 'PENNINSULA')
+    for destination in destinations:
+        if destination.get_pen() == target:
+            print(destination)
 
-                               # show data for target:  nature or city or town
+                                # show data for target:  nature or city or town
 def show_category(target, destinations):
     print('\nDESTINATIONS IN', target, 'CATETORY')
+    for destination in destinations:
+        if destination.get_category() == target:
+            print(destination)
 
                                         # show data <= distance from Kalamazoo
 def show_close_to_KZO(distance, destinations):
     print('\nDESTINATIONS WITHIN', distance, 'MILES OF Kalamazoo')
+    for destination in destinations:
+        if destination.get_distance() <= distance:
+            print(destination)
 
 
 def show_all(destinations):                # show all destinations in the list
     print('\nALL DESTINATIONS')
+    for destination in destinations:
+        print(destination)
