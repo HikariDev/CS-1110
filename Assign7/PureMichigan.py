@@ -22,6 +22,7 @@ def main():
     pickling.save_list_of_obj(destinations)
     print('OK, Destinations dictionary SAVED to BACKUP\n')
     print('\nTHE END')
+    input("Press ENTER to exit!")
 
 
 main()
