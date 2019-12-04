@@ -1,6 +1,6 @@
 # MODULE:  Destination                          used by PROJECT:  PureMichigan
 #           contains Destination CLASS
-# AUTHOR:                                       DESIGNER:  Dr. Kaminski
+# AUTHOR: Andrew Kroll                          DESIGNER:  Dr. Kaminski
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 class Destination:

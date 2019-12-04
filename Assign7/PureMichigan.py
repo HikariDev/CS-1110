@@ -1,5 +1,5 @@
 # PROJECT:  PureMichigan                        uses MODULES:  see imports
-# AUTHOR:  Dr. Kaminski
+# AUTHOR: Andrew Kroll                          DESIGNER:  Dr. Kaminski
 # NAMING NOTE:
 #       destinations - the list of objects
 #       destination  - a single object (an INTANCE of Destination CLASS type)

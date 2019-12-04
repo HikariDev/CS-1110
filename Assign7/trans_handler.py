@@ -1,5 +1,5 @@
 # MODULE:  trans_handler                        used by PROJECT:  PureMichigan
-# AUTHOR:                                       DESIGNER:  Dr. Kaminski
+# AUTHOR: Andrew Kroll                          DESIGNER:  Dr. Kaminski
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 from Assign7 import Destination

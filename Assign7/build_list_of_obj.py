@@ -1,5 +1,5 @@
 # MODULE:  build_list                           used by PROJECT:  PureMichigan
-# AUTHOR:                                       DESIGNER:  Dr. Kaminski
+# AUTHOR: Andrew Kroll                          DESIGNER:  Dr. Kaminski
 # NOTE:  Data lines have a ',' at the end besides the '\n' which both need
 #       removing before splitting the line into fields.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

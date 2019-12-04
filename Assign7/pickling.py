@@ -1,5 +1,5 @@
 # MODULE:  pickling                             used by PROJECT:  PureMichigan
-# AUTHOR:                                       DESIGNER:  Dr. Kaminski
+# AUTHOR: Andrew Kroll                          DESIGNER:  Dr. Kaminski
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 import pickle
