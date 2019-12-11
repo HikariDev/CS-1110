@@ -1,0 +1,71 @@
+OK, finished making location dictionary
+OK, finished making income dictionary
+
+OK, starting transaction processing
+
+country,United States
+United States   in North America (North America  ) pop:    329,064,917   $43,585   $15,480
+
+country,China
+China           in Asia          (Eastern Asia   ) pop:  1,433,783,686   $ 6,180   $ 1,786
+
+country,India
+India           in Asia          (Southern and Ce) pop:  1,366,417,754   $ 3,168   $   616
+
+country,Norway
+Norway          in Europe        (Nordic Countrie) pop:      5,378,857   $51,489   $19,308
+
+country,Kalamazoo
+SORRY, missing data for that country
+
+country,Greenland
+SORRY, missing data for that country
+
+country,Antarctica
+SORRY, missing data for that country
+
+country,Dominican Republic
+Dominican Repub in North America (Caribbean      ) pop:     10,738,958   $ 6,302   $ 1,623
+
+country,Republic of the Congo
+SORRY, missing data for that country
+
+country,Congo
+SORRY, missing data for that country
+
+region,Central Africa
+Cameroon        in Africa        (Central Africa ) pop:     25,876,380   $ 2,075   $   403
+Chad            in Africa        (Central Africa ) pop:     15,946,876   $ 2,394   $   338
+Angola          in Africa        (Central Africa ) pop:     31,825,295   $ 3,534   $   720
+
+region,Southern and Central Asia
+Sri Lanka       in Asia          (Southern and Ce) pop:     21,323,733   $ 3,242   $   719
+Iran            in Asia          (Southern and Ce) pop:     82,913,906   $12,046   $ 3,115
+Tajikistan      in Asia          (Southern and Ce) pop:      9,321,018   $ 5,137   $   713
+Kyrgyzstan      in Asia          (Southern and Ce) pop:      6,415,850   $ 4,034   $   828
+India           in Asia          (Southern and Ce) pop:  1,366,417,754   $ 3,168   $   616
+Pakistan        in Asia          (Southern and Ce) pop:    216,565,318   $ 4,060   $   480
+Bangladesh      in Asia          (Southern and Ce) pop:    163,046,161   $ 2,819   $   567
+Nepal           in Asia          (Southern and Ce) pop:     28,608,710   $ 2,718   $   519
+Afghanistan     in Asia          (Southern and Ce) pop:     38,041,754   $ 4,121   $   378
+
+region,British Islands
+United Kingdom  in Europe        (British Islands) pop:     67,530,172   $31,617   $12,399
+
+region,West Michigan
+
+income,40000
+Luxembourg      in Europe        (Western Europe ) pop:        615,729   $52,493   $18,418
+Norway          in Europe        (Nordic Countrie) pop:      5,378,857   $51,489   $19,308
+Sweden          in Europe        (Nordic Countrie) pop:     10,036,379   $50,514   $18,632
+Australia       in Oceania       (Australia and N) pop:     25,203,198   $46,555   $15,026
+Denmark         in Europe        (Nordic Countrie) pop:      5,771,876   $44,360   $18,262
+United States   in North America (North America  ) pop:    329,064,917   $43,585   $15,480
+Canada          in North America (North America  ) pop:     37,411,047   $41,280   $15,181
+South Korea     in Asia          (Eastern Asia   ) pop:     51,225,308   $40,861   $11,950
+Kuwait          in Asia          (Middle East    ) pop:      4,207,083   $40,854   $ 7,487
+
+income,60000
+
+
+THE END
