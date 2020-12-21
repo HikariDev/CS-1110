@@ -2,7 +2,7 @@
 # AUTHOR: Andrew Kroll                          DESIGNER:  Dr. Kaminski
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-from Assign7 import Destination
+from A7 import Destination
 
 
 def do_transactions(destinations):

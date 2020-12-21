@@ -3,7 +3,7 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 import pickle
-from Assign7 import Destination
+from A7 import Destination
 
 FILE_NAME = 'Destinations.bin'
 

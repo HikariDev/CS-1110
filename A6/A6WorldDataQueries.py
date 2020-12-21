@@ -20,9 +20,9 @@
 #       output to the console).
 # ----------------------------------------------------------------------------
 
-from Assign6 import create_db_indexes as create
-from Assign6 import dump_load as backup
-from Assign6 import query_handler as querying
+from A6 import create_db_indexes as create
+from A6 import dump_load as backup
+from A6 import query_handler as querying
 
 
 def main():

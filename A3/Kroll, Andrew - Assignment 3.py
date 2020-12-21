@@ -7,7 +7,7 @@
 # characters (all are the same size).
 
 
-from Assignments import char_des
+from A3 import char_des
 
 
 def main():

@@ -4,7 +4,7 @@
 #       removing before splitting the line into fields.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-from Assign7 import Destination
+from A7 import Destination
 
 
 def load_file_data():

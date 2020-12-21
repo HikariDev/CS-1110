@@ -7,7 +7,7 @@
 #       Destination - CLASS name
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-from Assign7 import build_list_of_obj, pickling, trans_handler
+from A7 import build_list_of_obj, pickling, trans_handler
 
 
 def main():
